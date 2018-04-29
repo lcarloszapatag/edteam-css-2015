@@ -1,3 +1,5 @@
+-var nombres = ['laura','carmen','mario','sandra'];
+
 <!DOCTYPE html>
 html(lang="es")
     
@@ -5,13 +7,50 @@ html(lang="es")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(href="https://file.myfontastic.com/QmH5RdXDz9NnsaoL9djN3j/icons.css" rel="stylesheet")
         title Document
     
     body
-
-    header.main-header
-    .banner
-    section.skills
-    section.staff
-    .contact
-    footer.main-footer
+        header.main-header
+            div(class="box-logo"): img(class="logo-img" src="img/logo.png" alt="logo del salon de belleza")
+            div(class="icon-bar")
+        .banner
+            img(src="img/banner.jpg" alt="mujer maquillada")
+            div(class="copy")
+                h1(Class="copy__title") tu belleza y estilo en nuestras manos
+                p(Class="copy__title")  Profesionales a tu servicio
+                button(Class="copy__btn btn btn--1")  Conoce mas
+        section.skills
+            h2(class="skill") cabello
+            h2(class="skill") manos y pies
+            h2(class="skill") cuidado de la piel
+        section.staff
+            h2(class="staff-title") staff
+            - for (var i=0; i<nombres.length; i++)
+                div(class="member")
+                    div(class="member__box"): img(class="member__box__img" src="img/staff-1.jpg", alt="foto del trabajador")
+                    p(class="member__name")=nombres[i]
+                    button(class="btn btn--2") Pedir cita
+        .contact
+            section(class="contact-ubication")
+                h2(class="contact-ubication__title") visitanos
+                div(class="box-map")
+                p(class="direction") Av Peru 1234 - Lima Peru
+                p(class="phone") 123 456 789
+            section(class="contact-form")
+                h2(class="contact-ubication__title") o escribenos
+                form(action="" class="form")
+                    - for (var i=0;i<5;i++)
+                        div(class="form-item")
+                            label(for="")
+                            case i
+                                when 3
+                                    textarea(name="" required)
+                                when 4
+                                    input(type="submit" value="enviar" required)
+                                default
+                                    input(type='text' required) 
+        footer.main-footer
+            a(class="icon-github" href="#")
+            a(class="icon-facebook" href="#")
+            a(class="icon-twitter" href="#")
