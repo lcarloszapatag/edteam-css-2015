@@ -13,7 +13,9 @@ h2 {
 }
 
 p,
-a {
+a,
+label,
+button {
     font-family: 'Lato', sans-serif;
 }
 
@@ -39,5 +41,27 @@ a {
 }
 
 img {
+    max-width: 100%;
+}
+
+textarea{
+    width: 100%;
+}
+
+label ~ input {
+    width: 100%;
+}
+
+label {
+    font-weight: 300;
+    font-size: .75rem;
+}
+
+label,
+input {
+    display: block;
+}
+
+iframe {
     max-width: 100%;
 }
