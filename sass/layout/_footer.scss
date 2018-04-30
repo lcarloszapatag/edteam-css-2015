@@ -1,0 +1,13 @@
+.main-footer {
+    margin-top: 3em;
+    background-color: $color-1;
+    text-align: center;
+    line-height: 3em;
+}
+
+a[class^="icon"] {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: rgba(255,255,255,.7);
+    padding: .75em;
+}
