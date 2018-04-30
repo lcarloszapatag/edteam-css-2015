@@ -1,0 +1,26 @@
+.main-header {
+    background-color: $color-1;
+    .container {
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.box-logo {
+    line-height: 0; 
+    .logo-img {
+        height: 80px;
+        width: 120px;
+    }
+}
+
+.icon-bar {
+    font-size: 2rem;
+    line-height: 1em;
+    color: #fff;
+}
+
+.menu {
+    display: none;
+}
