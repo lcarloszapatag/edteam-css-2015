@@ -1,0 +1,30 @@
+.contact-ubication__title,
+.contact-form__title {
+    border-bottom: 1px solid black;
+    padding-bottom: .1em;
+    margin-bottom: 1em;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.direction,
+.phone {
+    color: $color-2;
+    font-size: .875rem;
+    line-height: 1.5em;
+    letter-spacing: 1px;
+}
+
+.form-item {
+    margin-bottom: 1em;
+    label {
+        line-height: 1.5em;
+    }
+    input {
+        line-height: 1.5em
+    }
+}
+
+.contact-ubication {
+    margin-bottom: 2em;
+}
