@@ -4,6 +4,10 @@
     margin-bottom: 2em;
     padding: 1em;
     text-align: center;
+    @media screen and(min-width: 480px) {
+        width: calc(50% - .5em);
+        margin-bottom: 1em;
+    }
     &__name { 
         margin-bottom: 1em;
         font-family: 'Oswald', sans-serif;
@@ -21,4 +25,9 @@
     &__btn{
         margin-bottom: 1em;
     }
+}
+
+.member:nth-child(odd) {
+    @media screen and(min-width: 480px) {   
+    } 
 }
