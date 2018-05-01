@@ -12,12 +12,13 @@
     font-size: 1.375rem;
     font-weight: 300;
     color: #fff;
-    line-height: 7.273em;
+    line-height: 8em;
     text-align: center;
     text-transform: uppercase;
     
     @media screen and(min-width: 768px) {
         flex: 1;
+        line-height: 12em;
     }
 }
 
@@ -25,5 +26,6 @@
     @media screen and(min-width: 768px) {
         display: flex;
         justify-content: space-between;
+        
     }
 }

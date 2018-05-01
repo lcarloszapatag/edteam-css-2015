@@ -11,7 +11,8 @@
         z-index: 1;
     }
     &__img {
-        display: block; 
+        display: block;
+        width: 100%;
     }
 }
 
@@ -25,13 +26,22 @@
     text-transform: uppercase;
     line-height: 1.75em;
     color: #fff;
-    z-index: 2; 
+    z-index: 2;
+    @media screen and(min-width: 1024px) {
+        line-height: 4em;
+    }
     &__title {
         font-size: 1.3rem;
         font-weight: 300; 
         text-transform: uppercase;
+        @media screen and(min-width: 1024px) {
+            font-size: 3rem;
+        }
     }
     &__text {
         font-size: .875rem;
+        @media screen and(min-width: 1024px) {
+            font-size: 1.2rem;
+        }
     }
 }
