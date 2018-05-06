@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Oswald:300,400,700');
+
+$color-1: #514077;
+$color-2: #924992;
+$color-3: #FFAD01;
+
+$font-size : 16px;
+
+$font-title: 'Oswald', sans-serif;
+$font-text: 'Lato', sans-serif;
+
+%placeHolder-container {
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+$break1: (480 / 16) * 1em;
+$break2: (768 / 16) * 1em;
+$break3: (1024 / 16) * 1em;
+
+
+$map-breakpoints : (celular: $break1, tablet: $break2, laptop:$break3);
+
+
+.imprimir { 
+    type: type-of($map-breakpoints);
+    type: type-of($break1);
+} 

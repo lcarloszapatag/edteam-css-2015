@@ -1,6 +1,7 @@
 .main-header {
     background-color: $color-1;
     .container {
+        @extend %placeHolder-container;
         display: flex; 
         justify-content: space-between;
         align-items: center;

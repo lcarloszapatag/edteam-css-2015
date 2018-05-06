@@ -1,11 +1,15 @@
+@mixin skill-color($bg,$c) {
+    background-color: $bg;
+    color: $c;
+}
 .skill:first-child {
-    background-color: $color-1;
+    @include skill-color($color-1,#fff);
 }
-.skill:nth-child(2) {
-    background-color: $color-2;
+.skill:nth-child(2) { 
+    @include skill-color($color-2,#fff);
 }
-.skill:last-child {
-    background-color: $color-3;
+.skill:last-child { 
+    @include skill-color($color-3,#fff);
 }
 
 .skill {

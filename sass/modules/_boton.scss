@@ -1,23 +1,35 @@
-.btn {
+@mixin colorBoton($background,$color,$uno,$dos: 1em){
+    background-color: $background;
+    color: $color;
+    padding: $uno $dos;
+}
+%style-boton{
     border: 0;
     padding: 0;
     cursor: pointer;
+}
+
+.btn {
+    @extend %style-boton;
     &--1 {
-        background-color: $color-1;
-        color: #fff; 
-        padding: .5em .5em;
+        @include colorBoton($color-1,#fff,1em); 
         margin-top: .5em;
+        &:hover{
+            background: darken($color-1,6%);
+        }
     }
     &--2{
-        background-color: $color-3;
-        color: $color-1;
-        padding: .5em .75em;
+        @include colorBoton($color-3,$color-1,.5em,.75em); 
+        &:hover{
+            background: darken($color-3,6%);
+        }
     }
     &--3{
-        font-size: .8rem;
-        background-color: $color-2;
-        color: #fff;
-        padding: 1em;
+        @include colorBoton($color-2,#fff,1em);
+        font-size: .8rem;  
         text-transform: uppercase;
+        &:hover{
+            background: darken($color-2,6%);
+        }
     }
 }

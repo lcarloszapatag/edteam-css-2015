@@ -1,31 +1,37 @@
-.member {
+ 
+
+@mixin member(){
     background-color: rgba(17,17,17,.07);
     border: 1px solid $color-2;
     margin-bottom: 2em;
     padding: 1em;
     text-align: center;
-    @media screen and(min-width: 480px) {
-        width: calc(50% - .5em);
-        margin-bottom: 1em;
-    }
-    @media screen and(min-width: 1024px) {
-        width: calc(25% - 1em); 
-    }
-    &__name { 
-        margin-bottom: 1em;
-        font-family: 'Oswald', sans-serif;
-        font-size: 1.125rem;
-        font-weight: 300;
-        text-transform: uppercase; 
-    } 
-    &__img { 
+    &__img{
         margin-bottom: 1em; 
         margin-top: 1em;
         width: 50%;
         border: 3px solid $color-2; 
         border-radius: 100%; 
     }
+    &__name{
+        margin-bottom: 1em;
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.125rem;
+        font-weight: 300;
+        text-transform: uppercase; 
+    }
     &__btn{
         margin-bottom: 1em;
     }
+}
+
+.member {
+    @include member();
+    @media screen and(min-width: 480px) {
+        width: calc(50% - .5em);
+        margin-bottom: 1em;
+    }
+    @media screen and(min-width: 1024px) {
+        width: calc(25% - 1em); 
+    } 
 }
