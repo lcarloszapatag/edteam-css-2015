@@ -1,5 +1,6 @@
 -var nombres = ['laura','carmen','mario','sandra'];
 -var menu = ['inicio','el staff','servicios','promociones','contacto'];
+-var contenido = "Sitio web de un salon de belleza";
 
 <!DOCTYPE html>
 html(lang="es")
@@ -7,6 +8,7 @@ html(lang="es")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="description" content=contenido)
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         link(href="https://file.myfontastic.com/QmH5RdXDz9NnsaoL9djN3j/icons.css" rel="stylesheet")
         link(rel="stylesheet" type="text/css" href="css/styles.css")
@@ -35,39 +37,39 @@ html(lang="es")
             h2(class="staff-title") staff
             .container
                 - for (var i=0; i<nombres.length; i++)
-                    div(class="member")
-                        img(class="member__img" src="img/staff-1.jpg", alt="foto del trabajador")
-                        p(class="member__name")=nombres[i]
+                    div( itemscope itemtype="http://schema.org/Person" class="member")
+                        img(class="member__img" src="img/staff-1.jpg" alt="foto del trabajador" itemprop="image")
+                        p(class="member__name" itemprop="name")=nombres[i]
                         button(class="member__btn btn btn--2") Pedir cita
         .contact
             .container
-                section(class="contact-ubication")
+                section(itemscope itemtype="http://schema.org/Place" class="contact-ubication")
                     h2(class="contact-ubication__title") visitanos
                     div(class="box-map")
-                        iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124867.30609884876!2d-77.1147337411913!3d-12.03640785669054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c84215b82a0b%3A0x3ab3593848bdcf19!2sBosque+El+Olivar+de+San+Isidro!5e0!3m2!1ses-419!2spe!4v1525052902014" width="600" height="450" frameborder="0" style="border:0" allowfullscreen)
-                    p(class="direction icon-map") Av Peru 1234 - Lima Peru
-                    p(class="phone icon-phone") 123 456 789
+                        iframe(itemprop="hasMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124867.30609884876!2d-77.1147337411913!3d-12.03640785669054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c84215b82a0b%3A0x3ab3593848bdcf19!2sBosque+El+Olivar+de+San+Isidro!5e0!3m2!1ses-419!2spe!4v1525052902014" width="600" height="450" frameborder="0" style="border:0" allowfullscreen)
+                    p(class="direction icon-map" itemprop="address") Av Peru 1234 - Lima Peru
+                    p(class="phone icon-phone" itemprop="faxNumber") 123 456 789
                 section(class="contact-form")
                     h2(class="contact-form__title") o escribenos
-                    form(action="" class="form")
+                    form(action="index.html" class="form")
                         - for (var i=0;i<5;i++)
                             div(class="form-item") 
                                 case i
                                     when 0 
-                                        label Su Nombre
+                                        label(for="nombre") Su Nombre
                                         input(id="nombre" type='text' pattern="[A-Za-z]{3,30}" required title="Solo se admiten letras minimo 3 caracteres y maximo 30") 
                                     when 1 
-                                        label Su Telefono
-                                        input(id="telefono" type='text' pattern="[0-9]{9}" required  title="solo se aceptan numero del 0 al 9 sin espacios en blanco") 
+                                        label(for="telefono") Su Telefono
+                                        input(id="telefono" type='tel' pattern="[0-9]{9}" required  title="solo se aceptan numero del 0 al 9 sin espacios en blanco") 
                                     when 2
-                                        label Su Correo
-                                        input(id="correo" type='text' pattern="[A-Za-z0-9]{3,50}(@hotmail.com|@gmail.com)" required title="solo puede terminar en @hotmail.com o @gmail.com") 
+                                        label(for="correo") Su Correo
+                                        input(id="correo" type='email' required title="solo puede terminar en @hotmail.com o @gmail.com") 
                                     when 3
-                                        label(for="") Su mensaje
-                                        textarea(id="mensaje" name="" cols="3" rows="10" pattern="['A-Za-z0-9']" required  title="solo se apcetan letras y numero no caracteres especiales")
+                                        label(for="mensaje") Su mensaje
+                                        textarea(id="mensaje" name="mensaje" cols="3" rows="10" title="solo se apcetan letras y numero no caracteres especiales")
                                     when 4
-                                        input(type="submit" class="btn btn--3" value="enviar" required)
+                                        input(type="submit" class="btn btn--3" value="enviar")
         footer.main-footer
-            a(class="icon-github" href="#")
-            a(class="icon-facebook" href="#")
-            a(class="icon-twitter" href="#")
+            a(class="icon-github" href="https://github.com/jordanpe1")
+            a(class="icon-facebook" href="https://www.facebook.com/")
+            a(class="icon-twitter" href="https://twitter.com/?lang=es")
