@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Sitio web de un salon de belleza"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link href="https://file.myfontastic.com/QmH5RdXDz9NnsaoL9djN3j/icons.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    <title>Beauty Salon</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <div class="box-logo"><img class="logo-img" src="img/logo.png" alt="logo del salon de belleza"/></div>
+        <div class="icon-bar" id="bar"></div>
+        <nav class="menu" id="menu">
+          <ul class="menu-list">
+            <li class="menu-list__item"><a class="menu-list__item__link">inicio</a></li>
+            <li class="menu-list__item"><a class="menu-list__item__link">el staff</a></li>
+            <li class="menu-list__item"><a class="menu-list__item__link">servicios</a></li>
+            <li class="menu-list__item"><a class="menu-list__item__link">promociones</a></li>
+            <li class="menu-list__item"><a class="menu-list__item__link">contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="banner"><img class="banner__img" src="img/banner.jpg" alt="mujer maquillada"/>
+      <div class="copy">
+        <h1 Class="copy__title">tu belleza y estilo en nuestras manos</h1>
+        <p Class="copy__text"> Profesionales a tu servicio</p>
+        <button Class="copy__btn btn btn--1"> Conoce mas</button>
+      </div>
+    </div>
+    <section class="skills">
+      <h2 class="skill">cabello</h2>
+      <h2 class="skill">manos y pies</h2>
+      <h2 class="skill">cuidado de la piel</h2>
+    </section>
+    <section class="staff">
+      <h2 class="staff-title">staff</h2>
+      <div class="container">
+        <div class="member" itemscope="itemscope" itemtype="http://schema.org/Person"><img class="member__img" src="img/staff-1.jpg" alt="foto del trabajador" itemprop="image"/>
+          <p class="member__name" itemprop="name">laura</p>
+          <button class="member__btn btn btn--2">Pedir cita</button>
+        </div>
+        <div class="member" itemscope="itemscope" itemtype="http://schema.org/Person"><img class="member__img" src="img/staff-1.jpg" alt="foto del trabajador" itemprop="image"/>
+          <p class="member__name" itemprop="name">carmen</p>
+          <button class="member__btn btn btn--2">Pedir cita</button>
+        </div>
+        <div class="member" itemscope="itemscope" itemtype="http://schema.org/Person"><img class="member__img" src="img/staff-1.jpg" alt="foto del trabajador" itemprop="image"/>
+          <p class="member__name" itemprop="name">mario</p>
+          <button class="member__btn btn btn--2">Pedir cita</button>
+        </div>
+        <div class="member" itemscope="itemscope" itemtype="http://schema.org/Person"><img class="member__img" src="img/staff-1.jpg" alt="foto del trabajador" itemprop="image"/>
+          <p class="member__name" itemprop="name">sandra</p>
+          <button class="member__btn btn btn--2">Pedir cita</button>
+        </div>
+      </div>
+    </section>
+    <div class="contact">
+      <div class="container">
+        <section class="contact-ubication" itemscope="itemscope" itemtype="http://schema.org/Place">
+          <h2 class="contact-ubication__title">visitanos</h2>
+          <div class="box-map">
+            <iframe itemprop="hasMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124867.30609884876!2d-77.1147337411913!3d-12.03640785669054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c84215b82a0b%3A0x3ab3593848bdcf19!2sBosque+El+Olivar+de+San+Isidro!5e0!3m2!1ses-419!2spe!4v1525052902014" width="600" height="450" frameborder="0" style="border:0" allowfullscreen="allowfullscreen"></iframe>
+          </div>
+          <p class="direction icon-map" itemprop="address">Av Peru 1234 - Lima Peru</p>
+          <p class="phone icon-phone" itemprop="faxNumber">123 456 789</p>
+        </section>
+        <section class="contact-form">
+          <h2 class="contact-form__title">o escribenos</h2>
+          <form class="form" action="index.html">
+            <div class="form-item"> 
+              <label for="nombre">Su Nombre</label>
+              <input id="nombre" type="text" pattern="[A-Za-z]{3,30}" required="required" title="Solo se admiten letras minimo 3 caracteres y maximo 30"/>
+            </div>
+            <div class="form-item"> 
+              <label for="telefono">Su Telefono</label>
+              <input id="telefono" type="tel" pattern="[0-9]{9}" required="required" title="solo se aceptan numero del 0 al 9 sin espacios en blanco"/>
+            </div>
+            <div class="form-item"> 
+              <label for="correo">Su Correo</label>
+              <input id="correo" type="email" required="required" title="solo puede terminar en @hotmail.com o @gmail.com"/>
+            </div>
+            <div class="form-item"> 
+              <label for="mensaje">Su mensaje</label>
+              <textarea id="mensaje" name="mensaje" cols="3" rows="10" title="solo se apcetan letras y numero no caracteres especiales"></textarea>
+            </div>
+            <div class="form-item"> 
+              <input class="btn btn--3" type="submit" value="enviar"/>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+    <footer class="main-footer"><a class="icon-github" href="https://github.com/jordanpe1"></a><a class="icon-facebook" href="https://www.facebook.com/"></a><a class="icon-twitter" href="https://twitter.com/?lang=es"></a></footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

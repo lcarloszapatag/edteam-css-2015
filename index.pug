@@ -18,8 +18,8 @@ html(lang="es")
         header.main-header
             .container
                 div(class="box-logo"): img(class="logo-img" src="img/logo.png" alt="logo del salon de belleza")
-                div(class="icon-bar")
-                nav(class="menu")
+                div(class="icon-bar" id="bar")
+                nav(class="menu" id="menu")
                     ul(class="menu-list")
                         each item in menu
                             li(class="menu-list__item"): a(class="menu-list__item__link")=item
@@ -73,3 +73,4 @@ html(lang="es")
             a(class="icon-github" href="https://github.com/jordanpe1")
             a(class="icon-facebook" href="https://www.facebook.com/")
             a(class="icon-twitter" href="https://twitter.com/?lang=es")
+        script(src="js/script.js")
