@@ -18,13 +18,12 @@ $font-text: 'Lato', sans-serif;
 
 $break1: (480 / 16) * 1em;
 $break2: (768 / 16) * 1em;
-$break3: (1024 / 16) * 1em;
+$break3: (1024 / 16) * 1em; 
 
+
+body {
+    position: relative;
+    right: 0;
+}
 
 $map-breakpoints : (celular: $break1, tablet: $break2, laptop:$break3);
-
-
-.imprimir { 
-    type: type-of($map-breakpoints);
-    type: type-of($break1);
-} 
